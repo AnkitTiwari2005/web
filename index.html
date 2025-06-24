@@ -3,50 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 2 Assignment</title>
-    <!-- Link to the external stylesheet -->
+    <title>Our Culinary Delights</title>
+    <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Optional: Google Fonts for a more modern look. Not required by assignment, but enhances aesthetics. -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Main heading of the page -->
-    <h1>Our Delicious Menu</h1>
+    <header class="main-header">
+        <h1>Our Culinary Delights</h1>
+    </header>
 
-    <!-- Container for all the menu sections -->
-    <div class="row">
-        <!-- Section for Chicken -->
+    <!-- Container for all the menu sections, structured for responsiveness -->
+    <div class="row-container">
+        <!-- Section for Chicken Dishes -->
         <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="section-box">
-                <!-- Title for the Chicken section -->
-                <div class="section-title" id="chicken-title">Chicken</div>
-                <!-- Dummy text content for the Chicken section -->
+            <section class="menu-item-card">
+                <!-- Title for the Chicken section, positioned absolutely -->
+                <div class="item-title" id="chicken-title">Chicken</div>
+                <!-- Content for the Chicken section -->
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Experience our succulent chicken dishes, prepared with fresh herbs and spices. From grilled perfection to creamy curries, each bite promises a delightful journey. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-            </div>
+            </section>
         </div>
 
-        <!-- Section for Beef -->
+        <!-- Section for Beef Specialties -->
         <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="section-box">
-                <!-- Title for the Beef section -->
-                <div class="section-title" id="beef-title">Beef</div>
-                <!-- Dummy text content for the Beef section -->
+            <section class="menu-item-card">
+                <!-- Title for the Beef section, positioned absolutely -->
+                <div class="item-title" id="beef-title">Beef</div>
+                <!-- Content for the Beef section -->
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Savor our rich and tender beef selections. Whether it's a slow-cooked stew or a perfectly seared steak, our beef dishes are crafted to satisfy your deepest cravings. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-            </div>
+            </section>
         </div>
 
-        <!-- Section for Sushi -->
+        <!-- Section for Fresh Sushi -->
         <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="section-box">
-                <!-- Title for the Sushi section -->
-                <div class="section-title" id="sushi-title">Sushi</div>
-                <!-- Dummy text content for the Sushi section -->
+            <section class="menu-item-card">
+                <!-- Title for the Sushi section, positioned absolutely -->
+                <div class="item-title" id="sushi-title">Sushi</div>
+                <!-- Content for the Sushi section -->
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Dive into the exquisite world of fresh sushi and sashimi. Hand-rolled with the finest ingredients, our sushi offers an authentic taste of Japanese culinary artistry. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </div>
+            </section>
         </div>
     </div>
 </body>
