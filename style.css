@@ -10,6 +10,7 @@ body {
     font-family: 'Inter', sans-serif; /* Changed font-family for a fresh look */
     line-height: 1.6;
     background-color: #f4f4f4; /* Slightly different background */
+    color: #333; /* Default text color for better readability */
 }
 
 /* Heading styling */
@@ -18,25 +19,36 @@ h1 {
     margin-top: 50px; /* Increased top margin */
     margin-bottom: 40px; /* Increased bottom margin */
     font-size: 2em; /* Slightly larger heading */
-    color: #333;
+    color: #0056b3; /* A more distinct heading color */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
 }
 
 /* Row container for sections to enable floating layout */
 .row {
     width: 100%;
+    /* Max width to center the content on very large screens, keeping some margin */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the row */
     padding: 0 20px; /* Increased horizontal spacing from browser edges */
+    overflow: hidden; /* Clear floats */
 }
 
 /* Styling for each section box */
 .section-box {
     position: relative; /* For absolute positioning of the title */
-    background-color: #e0e0e0; /* Different background color for sections */
-    border: 1px solid #777; /* Softer black border for sections */
+    background-color: #ffffff; /* Clean white background for sections */
+    border: 1px solid #c0c0c0; /* Lighter, more subtle border for sections */
     margin-bottom: 30px; /* Increased vertical spacing between sections */
     padding: 15px; /* Increased padding inside the section for text */
-    padding-top: 50px; /* Push down text more to avoid overlapping title */
-    border-radius: 8px; /* Rounded corners for sections */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding-top: 60px; /* Push down text more to avoid overlapping title */
+    border-radius: 10px; /* More rounded corners for sections */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.section-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Styling for the section title */
@@ -44,28 +56,35 @@ h1 {
     position: absolute; /* Position relative to the parent .section-box */
     top: 0;
     right: 0;
-    border: 1px solid #777; /* Softer black border for section titles */
-    padding: 8px 20px; /* Adjusted padding */
-    font-size: 1.3em; /* Slightly larger title font */
+    border: 1px solid #a0a0a0; /* Slightly darker border for section titles */
+    padding: 10px 25px; /* Adjusted padding */
+    font-size: 1.4em; /* Slightly larger title font */
     font-weight: bold;
     text-align: center;
-    border-bottom-left-radius: 8px; /* Rounded bottom-left corner */
+    border-bottom-left-radius: 10px; /* More rounded bottom-left corner */
     color: #fff; /* White text for all titles */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Text shadow for titles */
 }
 
 /* Specific background colors for each section title */
 #chicken-title {
-    background-color: #ff9999; /* Softer red/pink for Chicken */
+    background-color: #ff6347; /* Tomato red for Chicken */
 }
 
 #beef-title {
-    background-color: #a0522d; /* Sienna for Beef */
+    background-color: #6a0572; /* Dark purple for Beef */
 }
 
 #sushi-title {
-    background-color: #ffd700; /* Gold for Sushi */
-    color: #333; /* Darker text for Sushi title for contrast */
+    background-color: #3cb371; /* Medium Sea Green for Sushi */
 }
+
+/* Paragraph text styling */
+.section-box p {
+    font-size: 1em; /* Base font size for paragraph */
+    line-height: 1.8;
+}
+
 
 /* --- Responsive Layouts (Media Queries) --- */
 
