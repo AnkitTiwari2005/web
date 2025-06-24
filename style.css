@@ -1,0 +1,115 @@
+/* Universal box-sizing for consistent layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling for default font and spacing */
+body {
+    font-family: 'Inter', sans-serif; /* Changed font-family for a fresh look */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Slightly different background */
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-top: 50px; /* Increased top margin */
+    margin-bottom: 40px; /* Increased bottom margin */
+    font-size: 2em; /* Slightly larger heading */
+    color: #333;
+}
+
+/* Row container for sections to enable floating layout */
+.row {
+    width: 100%;
+    padding: 0 20px; /* Increased horizontal spacing from browser edges */
+}
+
+/* Styling for each section box */
+.section-box {
+    position: relative; /* For absolute positioning of the title */
+    background-color: #e0e0e0; /* Different background color for sections */
+    border: 1px solid #777; /* Softer black border for sections */
+    margin-bottom: 30px; /* Increased vertical spacing between sections */
+    padding: 15px; /* Increased padding inside the section for text */
+    padding-top: 50px; /* Push down text more to avoid overlapping title */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling for the section title */
+.section-title {
+    position: absolute; /* Position relative to the parent .section-box */
+    top: 0;
+    right: 0;
+    border: 1px solid #777; /* Softer black border for section titles */
+    padding: 8px 20px; /* Adjusted padding */
+    font-size: 1.3em; /* Slightly larger title font */
+    font-weight: bold;
+    text-align: center;
+    border-bottom-left-radius: 8px; /* Rounded bottom-left corner */
+    color: #fff; /* White text for all titles */
+}
+
+/* Specific background colors for each section title */
+#chicken-title {
+    background-color: #ff9999; /* Softer red/pink for Chicken */
+}
+
+#beef-title {
+    background-color: #a0522d; /* Sienna for Beef */
+}
+
+#sushi-title {
+    background-color: #ffd700; /* Gold for Sushi */
+    color: #333; /* Darker text for Sushi title for contrast */
+}
+
+/* --- Responsive Layouts (Media Queries) --- */
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left; /* Float sections to be in one row */
+        width: 33.33%; /* Each section takes equal space */
+        padding: 0 15px; /* Horizontal spacing between sections */
+    }
+    .row {
+        margin-left: -15px; /* Compensate for column padding */
+        margin-right: -15px; /* Compensate for column padding */
+    }
+}
+
+/* Tablet View (between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        float: left; /* Float first two sections */
+        width: 50%; /* First two sections take equal space */
+        padding: 0 15px; /* Horizontal spacing between sections */
+    }
+
+    .col-md-12 {
+        float: left; /* Third section takes full width */
+        width: 100%;
+        padding: 0 15px; /* Horizontal spacing for the third section */
+    }
+    .row {
+        margin-left: -15px; /* Compensate for column padding */
+        margin-right: -15px; /* Compensate for column padding */
+    }
+}
+
+/* Mobile View (equal to or less than 767px) */
+@media (max-width: 767px) {
+    .col-sm-12 {
+        float: left; /* Float sections to ensure full width */
+        width: 100%; /* Each section takes up the entire row */
+        padding: 0 15px; /* Horizontal spacing for sections */
+    }
+    .row {
+        margin-left: -15px; /* Compensate for column padding */
+        margin-right: -15px; /* Compensate for column padding */
+    }
+}
