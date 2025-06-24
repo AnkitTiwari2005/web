@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 2 Solution</title>
+    <title>Module 2 Assignment</title>
     <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Main heading of the page -->
-    <h1>Our Menu</h1>
+    <h1>Our Delicious Menu</h1>
 
     <!-- Container for all the menu sections -->
     <div class="row">
@@ -51,112 +51,3 @@
     </div>
 </body>
 </html>
-```css
-/* Universal box-sizing for consistent layout */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Body styling for default font and spacing */
-body {
-    font-family: Arial, sans-serif; /* Optional font-family */
-}
-
-/* Heading styling */
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 1.75em; /* 75% larger than default paragraph font size (assuming default is 1em) */
-}
-
-/* Row container for sections to enable floating layout */
-.row {
-    width: 100%;
-    padding: 0 15px; /* Horizontal spacing from browser edges */
-}
-
-/* Styling for each section box */
-.section-box {
-    position: relative; /* For absolute positioning of the title */
-    background-color: #cccccc; /* Background color for sections */
-    border: 1px solid black; /* Black border for sections */
-    margin-bottom: 20px; /* Vertical spacing between sections */
-    padding: 10px; /* Padding inside the section for text */
-    padding-top: 40px; /* Push down text to avoid overlapping title */
-}
-
-/* Styling for the section title */
-.section-title {
-    position: absolute; /* Position relative to the parent .section-box */
-    top: 0;
-    right: 0;
-    border: 1px solid black; /* Black border for section titles */
-    padding: 5px 15px;
-    font-size: 1.25em; /* 25% larger than default paragraph font size */
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Specific background colors for each section title */
-#chicken-title {
-    background-color: #ffb6c1; /* Light pink */
-}
-
-#beef-title {
-    background-color: #dc143c; /* Crimson */
-    color: white; /* White text for better contrast */
-}
-
-#sushi-title {
-    background-color: #fffacd; /* Lemon Chiffon */
-}
-
-/* --- Responsive Layouts (Media Queries) --- */
-
-/* Desktop View (992px and above) */
-@media (min-width: 992px) {
-    .col-lg-4 {
-        float: left; /* Float sections to be in one row */
-        width: 33.33%; /* Each section takes equal space */
-        padding: 0 10px; /* Horizontal spacing between sections */
-    }
-    .row {
-        margin-left: -10px; /* Compensate for padding to align with mockups */
-        margin-right: -10px;
-    }
-}
-
-/* Tablet View (between 768px and 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-6 {
-        float: left; /* Float first two sections */
-        width: 50%; /* First two sections take equal space */
-        padding: 0 10px; /* Horizontal spacing between sections */
-    }
-
-    .col-md-12 {
-        float: left; /* Third section takes full width */
-        width: 100%;
-        padding: 0 10px; /* Horizontal spacing for the third section */
-    }
-    .row {
-        margin-left: -10px; /* Compensate for padding to align with mockups */
-        margin-right: -10px;
-    }
-}
-
-/* Mobile View (equal to or less than 767px) */
-@media (max-width: 767px) {
-    .col-sm-12 {
-        float: left; /* Float sections to ensure full width */
-        width: 100%; /* Each section takes up the entire row */
-        padding: 0 10px; /* Horizontal spacing for sections */
-    }
-    .row {
-        margin-left: -10px; /* Compensate for padding to align with mockups */
-        margin-right: -10px;
-    }
-}
