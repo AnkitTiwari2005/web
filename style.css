@@ -1,88 +1,97 @@
-/* Universal box-sizing for consistent layout */
+/* Universal box-sizing for consistent layout and base font settings */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body styling for default font and spacing */
 body {
-    font-family: 'Inter', sans-serif; /* Changed font-family for a fresh look */
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Slightly different background */
-    color: #333; /* Default text color for better readability */
+    font-family: 'Roboto', sans-serif; /* A clean, modern sans-serif font */
+    line-height: 1.7; /* Improved readability for body text */
+    background-color: #f0f2f5; /* A very light, subtle background */
+    color: #333; /* Dark gray for main text for good contrast */
+    padding-bottom: 50px; /* Add some space at the bottom */
 }
 
-/* Heading styling */
-h1 {
+/* Styling for the main page header */
+.main-header {
     text-align: center;
-    margin-top: 50px; /* Increased top margin */
-    margin-bottom: 40px; /* Increased bottom margin */
-    font-size: 2em; /* Slightly larger heading */
-    color: #0056b3; /* A more distinct heading color */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
+    padding: 60px 20px 40px; /* Generous padding for visual impact */
+    background-color: #ffffff; /* White background for the header area */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    margin-bottom: 30px;
 }
 
-/* Row container for sections to enable floating layout */
-.row {
+/* Styling for the main heading */
+h1 {
+    font-family: 'Playfair Display', serif; /* A more elegant serif font for the heading */
+    font-size: 3em; /* Larger heading size for prominence */
+    color: #2c3e50; /* A deep, rich blue-gray color */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slightly more pronounced text shadow */
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+/* Container for sections, mimicking a row with max-width for centering */
+.row-container {
     width: 100%;
-    /* Max width to center the content on very large screens, keeping some margin */
-    max-width: 1200px;
-    margin: 0 auto; /* Center the row */
-    padding: 0 20px; /* Increased horizontal spacing from browser edges */
-    overflow: hidden; /* Clear floats */
+    max-width: 1200px; /* Max width to center content on large screens */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 25px; /* Horizontal spacing from browser edges */
+    overflow: hidden; /* Clears floats within this container */
 }
 
-/* Styling for each section box */
-.section-box {
-    position: relative; /* For absolute positioning of the title */
-    background-color: #ffffff; /* Clean white background for sections */
-    border: 1px solid #c0c0c0; /* Lighter, more subtle border for sections */
-    margin-bottom: 30px; /* Increased vertical spacing between sections */
-    padding: 15px; /* Increased padding inside the section for text */
-    padding-top: 60px; /* Push down text more to avoid overlapping title */
-    border-radius: 10px; /* More rounded corners for sections */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+/* Styling for each individual menu item card (section box) */
+.menu-item-card {
+    position: relative; /* Essential for absolute positioning of the title */
+    background-color: #ffffff; /* Clean white background for cards */
+    border: 1px solid #e0e0e0; /* Very light border */
+    margin-bottom: 30px; /* Vertical spacing between cards */
+    padding: 20px; /* Generous padding inside the card for content */
+    padding-top: 70px; /* Pushes text down to prevent overlap with title */
+    border-radius: 12px; /* Nicely rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft, inviting shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
-.section-box:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+/* Hover effect for menu item cards */
+.menu-item-card:hover {
+    transform: translateY(-8px); /* Lifts the card slightly */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
 }
 
-/* Styling for the section title */
-.section-title {
-    position: absolute; /* Position relative to the parent .section-box */
+/* Styling for the section title within each card */
+.item-title {
+    position: absolute; /* Positions the title relative to its parent card */
     top: 0;
     right: 0;
-    border: 1px solid #a0a0a0; /* Slightly darker border for section titles */
-    padding: 10px 25px; /* Adjusted padding */
-    font-size: 1.4em; /* Slightly larger title font */
-    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border for the title background */
+    padding: 12px 30px; /* Ample padding within the title */
+    font-size: 1.5em; /* Larger font size for titles */
+    font-weight: 700; /* Bold font weight */
     text-align: center;
-    border-bottom-left-radius: 10px; /* More rounded bottom-left corner */
-    color: #fff; /* White text for all titles */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Text shadow for titles */
+    border-bottom-left-radius: 12px; /* Matches card's border-radius */
+    color: #ffffff; /* White text for all titles */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.25); /* Clear text shadow */
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1); /* Small shadow for the title tab */
 }
 
-/* Specific background colors for each section title */
+/* Specific background colors for each item title for visual distinction */
 #chicken-title {
-    background-color: #ff6347; /* Tomato red for Chicken */
+    background-color: #e74c3c; /* Vibrant red for Chicken */
 }
 
 #beef-title {
-    background-color: #6a0572; /* Dark purple for Beef */
+    background-color: #34495e; /* Dark slate blue for Beef */
 }
 
 #sushi-title {
-    background-color: #3cb371; /* Medium Sea Green for Sushi */
+    background-color: #27ae60; /* Emerald green for Sushi */
 }
 
-/* Paragraph text styling */
-.section-box p {
-    font-size: 1em; /* Base font size for paragraph */
-    line-height: 1.8;
+/* Paragraph text styling within the cards */
+.menu-item-card p {
+    font-size: 1.05em; /* Slightly larger base font size for readability */
+    color: #555; /* Softer gray for paragraph text */
 }
 
 
@@ -91,44 +100,47 @@ h1 {
 /* Desktop View (992px and above) */
 @media (min-width: 992px) {
     .col-lg-4 {
-        float: left; /* Float sections to be in one row */
-        width: 33.33%; /* Each section takes equal space */
-        padding: 0 15px; /* Horizontal spacing between sections */
+        float: left; /* Aligns items horizontally */
+        width: 33.33%; /* Each section takes one-third of the row */
+        padding: 0 15px; /* Horizontal spacing between columns */
     }
-    .row {
-        margin-left: -15px; /* Compensate for column padding */
-        margin-right: -15px; /* Compensate for column padding */
+    .row-container {
+        /* Compensate for the padding of the columns to maintain alignment */
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 
 /* Tablet View (between 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-6 {
-        float: left; /* Float first two sections */
-        width: 50%; /* First two sections take equal space */
-        padding: 0 15px; /* Horizontal spacing between sections */
+        float: left; /* Aligns first two items horizontally */
+        width: 50%; /* First two sections take half of the row */
+        padding: 0 15px; /* Horizontal spacing between columns */
     }
 
     .col-md-12 {
-        float: left; /* Third section takes full width */
-        width: 100%;
+        float: left; /* Ensures the third item goes to a new row */
+        width: 100%; /* Third section takes full width */
         padding: 0 15px; /* Horizontal spacing for the third section */
     }
-    .row {
-        margin-left: -15px; /* Compensate for column padding */
-        margin-right: -15px; /* Compensate for column padding */
+    .row-container {
+        /* Compensate for the padding of the columns to maintain alignment */
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 
 /* Mobile View (equal to or less than 767px) */
 @media (max-width: 767px) {
     .col-sm-12 {
-        float: left; /* Float sections to ensure full width */
+        float: left; /* Ensures each item takes its own row */
         width: 100%; /* Each section takes up the entire row */
         padding: 0 15px; /* Horizontal spacing for sections */
     }
-    .row {
-        margin-left: -15px; /* Compensate for column padding */
-        margin-right: -15px; /* Compensate for column padding */
+    .row-container {
+        /* Compensate for the padding of the columns to maintain alignment */
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
